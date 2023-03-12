@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta name="author" content="Marcolino Elvis da Silva - Marcolino07">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" href="arq/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="app.css">
+    <title>MAQUEIROS</title>
+</head>
+
+<body>
+<!--========================================PLANTÃO==================================================-->
+<header>
+	<button class="header-btn side-left-in">☰</button>
+    <h1 id="title"></h1>
+    <div class="select-menu">
+        <button class="header-btn select-menu-garbage" type="button">🗑️</button>
+        <button class="header-btn select-menu-cancel" type="button">⨉</button>
+    </div>
+</header>
+
+<!-- SIDE MENU 1 – – – – – – – – – – ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————— -->
+<div class="side-left-out"></div>
+<aside class="side-left">
+	<ul>
+	    <li id="maqueiro">
+	    	<h2>&ensp;<span>Digite seu nome</span></h2>
+	    </li>
+	    <li class="side-left-periodo">&emsp;<span>Períodos</span>
+	        <ul>
+                <li>ANUAL</li>
+                <li>MENSAL</li>
+                <li>DIÁRIO</li>
+                <li>HOJE</li>
+        	</ul>
+        </li>
+	    <li>&emsp;<span>Dados Salvos</span>
+            <ul>
+                <li id="side-left-acomp">Acompanhantes</li>
+                <li id="side-left-observ">Observações</li>
+                <li id="side-left-limpar">Limpar todos os Atendimentos</li>
+                <li id="side-left-resetar">RESETAR TODOS OS DADOS</li>
+            </ul>
+	    </li>
+	</ul>
+</aside>
+
+<main>
+    <!--========================================PERIODO==================================================-->
+    <section id="dv-periodo" class="block">
+
+        <article></article>
+
+        <div class="dv-btn abs">
+            <button id="btn-voltar-periodo" class="btn btn-left" type="button">&lt;</button>
+            <button id="btn-add-periodo" class="btn btn-right" type="button">ADICIONAR</button>
+        </div>        
+    </section>
+
+    <!--========================================REGISTRO==================================================-->
+    <section id="dv-registrar">
+        <article>
+            <div>
+                <label>DATA:<input id="data" type="date"></label>
+                <label>HORÁRIO:<input id="hora" type="time"></label>
+            </div>
+
+            <label>ORIGEM
+                <select id="origem">
+                    <option selected disabled hidden value>...</option>
+                </select>
+            </label>
+
+            <label>DESTINO
+                <select id="destino">
+                    <option selected disabled hidden value>...</option>
+                </select>
+            </label>
+
+            <label for="acomp">ACOMPANHADO POR:</label>
+                <input id="acomp" list="acomp-list" type="text" autocomplete/>
+                <datalist id="acomp-list"></datalist>
+
+            <label for="observ">OBSERVAÇÕES</label>
+                <input id="observ" list="observ-list" type="text" autocomplete/>
+                <datalist id="observ-list"></datalist>
+        </article>
+
+        <div class="dv-btn abs">
+            <button id="btn-cancelar-registrar" class="btn btn-left" type="button">CANCELAR</button>
+            <button id="btn-salvar-registrar" class="btn btn-right" type="button">SALVAR</button>
+        </div>
+    </section>
+
+    <!--========================================EDITOR==================================================-->
+    <section id="dv-editar">
+
+        <article></article>
+
+        <div class="dv-btn abs">
+            <button id="btn-cancelar-editar" class="btn btn-left" type="button">CANCELAR</button>
+            <button id="btn-excluir-editar" class="btn btn-right" type="button">EXCLUIR</button>
+        </div>
+    </section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
